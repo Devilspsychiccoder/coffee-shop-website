@@ -1,0 +1,31 @@
+---
+- name: nginx Install, Start and Server a static website
+  hosts: prod
+  become: yes
+  tasks:
+
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: latest
+
+    - name: Start nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Deploy Website
+      copy:
+        src: index.html
+        dest: /usr/share/nginx/html
+
+    - name: Copy css file
+      copy:      
+        src: style.css 
+        dest: /usr/share/nginx/html
+
+    - name: Copy css file
+      copy:
+        src: script.js
+        dest: /usr/share/nginx/html

@@ -3,80 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coffee Delight - Coffee Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Header -->
     <header>
-        <div class="logo">
-            <h1>Coffee Delight</h1>
-        </div>
         <nav>
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#offer">Special Offer</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <h1>Welcome to The Coffee Shop</h1>
     </header>
 
-    <!-- Main Banner -->
-    <section class="banner">
-        <h2>Welcome to Coffee Delight</h2>
-        <p>Your favorite spot for a perfect cup of coffee</p>
-        <button onclick="window.location.href='#menu'">Explore Our Menu</button>
-    </section>
-
-    <!-- Coffee Menu Section -->
-    <section id="menu" class="menu">
-        <h2>Our Coffee Menu</h2>
-        <div class="menu-items">
-            <div class="menu-item">
-                <h3>Espresso</h3>
-                <p>A strong and bold coffee shot.</p>
+    <section id="home">
+        <h2>Welcome to Our Cozy Coffee Shop!</h2>
+        <p>Serving you the finest coffee with love and passion.</p>
+        <div class="carousel" id="carousel">
+            <div class="carousel-item">
+                <img src="espresso.jpg" alt="Espresso">
+                <p>Espresso - Strong and Bold</p>
             </div>
-            <div class="menu-item">
-                <h3>Latte</h3>
-                <p>Smooth espresso with steamed milk.</p>
+            <div class="carousel-item">
+                <img src="cappuccino.jpg" alt="Cappuccino">
+                <p>Cappuccino - Creamy and Smooth</p>
             </div>
-            <div class="menu-item">
-                <h3>Cappuccino</h3>
-                <p>A rich espresso topped with frothy milk foam.</p>
-            </div>
-            <div class="menu-item">
-                <h3>Mocha</h3>
-                <p>Espresso with chocolate syrup and steamed milk.</p>
+            <div class="carousel-item">
+                <img src="latte.jpg" alt="Latte">
+                <p>Latte - Rich and Velvety</p>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>At Coffee Delight, we pride ourselves on serving freshly brewed coffee and creating a welcoming space for everyone. Whether you're grabbing a quick cup of espresso or enjoying a cozy moment with friends, we're here to make every sip count!</p>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <ul id="coffee-menu">
+            <!-- Coffee menu items will be dynamically added here -->
+        </ul>
+        <button id="load-menu-btn">Load Menu</button>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="offer">
+        <h2>Limited Time Offer!</h2>
+        <div id="countdown"></div>
+    </section>
+
+    <section id="contact">
         <h2>Contact Us</h2>
-        <p>Have questions or want to know more about our coffee? Feel free to reach out!</p>
-        <p>Email: <a href="mailto:contact@coffeedelight.com">contact@coffeedelight.com</a></p>
-        <p>Phone: +123 456 7890</p>
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Coffee Delight | All Rights Reserved</p>
+        <p>&copy; 2024 The Coffee Shop. All Rights Reserved.</p>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
-
-<script src="script.js"></script>
-</body>
-</html>
-
 

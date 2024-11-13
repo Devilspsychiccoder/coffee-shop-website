@@ -22,10 +22,25 @@
 
     - name: Copy css file
       copy:      
-        src: style.css 
+        src: styles.css 
         dest: /usr/share/nginx/html
 
-    - name: Copy css file
+    - name: Copy java script file
       copy:
-        src: script.js
+        src: scripts.js
         dest: /usr/share/nginx/html
+
+    - name: Copy expresso images
+      copy:
+        scr: espresso.jpg
+        dest: /usr/share/nginx/html    
+
+    - name: Copy  cap images
+      copy:
+        scr: cappuccino.jpg
+        dest: /usr/share/nginx/html
+
+    - name: Copy latte images
+      copy:
+        scr: latte.jpg
+        dest: /usr/share/nginx/html      
